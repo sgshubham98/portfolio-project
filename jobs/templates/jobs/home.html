@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,56 +13,59 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   </head>
 
   <body>
-
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Shubham Goswami</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Social Accounts
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Facebook</a>
-          <a class="dropdown-item" href="#">Instagram</a>
-          <a class="dropdown-item" href="#">Github</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <a class="navbar-brand" href="{% url 'home' %}">Shubham Goswami</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link active" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'posts' %}">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://linkedin.com/in/goswamishubham">Resume</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Social Accounts</a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="https://facebook.com/sgshubham98">Facebook</a>
+            <a class="dropdown-item" href="https://instagram.com/shubhamgoswami_">Instagram</a>
+            <a class="dropdown-item" href="https://github.com/shubhamgoswami">Github</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
+          <img class="w3-circle" src="{% static 'image.jpg' %}" alt="img" width="240" height="240">
           <h1 class="jumbotron-heading">Hi! I'm Shubham</h1>
           <p class="lead text-muted">Hey! My name is Shubham Goswami. I am undergraduate student at Krishna Institute Of Engineering and Technology. I am pursuing a bachelors degree in Computer Science and Engineering (B. Tech).</p>
           <p>
             <a href="mailto:sgshubham98@gmail.com" class="btn btn-primary my-2">E-mail</a>
           </p>
+        
         </div>
       </section>
 
       <div class="album py-5 bg-light">
         <div class="container">
+          <h1 class="text-center"></h2>
+            <br>
 
           <div class="row">
 
@@ -82,6 +85,8 @@
 
     </main>
 
+    
+
     <footer class="text-muted">
       <div class="container text-center">
         <p class="float-right">
@@ -90,7 +95,7 @@
         <p>© Shubham Goswami {% now "Y" %}</p>
       </div>
     </footer>
-
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
